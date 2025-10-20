@@ -13,5 +13,5 @@ class Boat:
 
 
     def __repr__(self):
-        boat_name = type(self).__name__
+        boat_name = self.name
         return f"{boat_name}{self.position}"

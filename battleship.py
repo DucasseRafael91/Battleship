@@ -13,7 +13,7 @@ def create_ships():
     boats = []
 
     # Porte-avions (B2 à F2) : ligne 1, colonnes 1-5
-    aircraft = Boat([(i, 1) for i in range(1, 6)])
+    aircraft = Boat([(i, 1) for i in range(1, 6)],"Aircraft")
     boats.append(aircraft)
 
     # Croiseur (A4 à A7)
