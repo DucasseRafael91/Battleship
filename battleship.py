@@ -3,6 +3,8 @@
 
 import numpy as np
 
+
+
 def create_ships():
     """
        Créer les différents bateaux
