@@ -6,8 +6,9 @@ class Boat:
         return len(cls.boats)
 
 
-    def __init__(self, position):
+    def __init__(self, position,name):
         self.position = position
+        self.name = name
         Boat.boats.append(self)
 
 

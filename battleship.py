@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-
+from Boat import Boat
 
 
 def create_ships():
@@ -13,25 +13,26 @@ def create_ships():
     boats = []
 
     # Porte-avions (B2 à F2) : ligne 1, colonnes 1-5
-    aircraft = [(1, col) for col in range(1, 6)]
+    aircraft = Boat([(i, 1) for i in range(1, 6)])
     boats.append(aircraft)
 
     # Croiseur (A4 à A7)
-    cruiser = [(row, 0) for row in range(3, 7)]
+    cruiser = Boat([(i, 1) for i in range(1, 6)], "Cruiser")
     boats.append(cruiser)
 
     # Contre-torpilleur (C5 à E5)
-    destroyer = [(row, 2) for row in range(4, 7)]
+    destroyer = Boat([(i, 1) for i in range(1, 6)], "Destroyer")
     boats.append(destroyer)
 
     # Sous-marin (H5 à J5)
-    submarine = [(4, col) for col in range(7, 10)]
+    submarine = Boat([(i, 1) for i in range(1, 6)],"Submarine")
     boats.append(submarine)
 
     # Torpilleur (E9 à F9)
-    torpedo_boat = [(8, col) for col in range(4, 6)]
+    torpedo_boat = Boat([(i, 1) for i in range(1, 6)], "Torpedo Boat")
     boats.append(torpedo_boat)
 
+    print(boats)
     return boats
 
 def create_empty_grid():
