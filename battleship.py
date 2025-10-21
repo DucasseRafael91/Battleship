@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from Grid import Grid
 from Boat import Boat
 
@@ -46,7 +49,7 @@ def main():
 
     hit_positions = []
     missed_positions = []
-    sink_boats = []
+    sunk_boats = []
 
     while True:
         coordinates = input("Coordonnées à tester :").strip().upper()
@@ -67,9 +70,9 @@ def main():
             grid_obj.grid[result[0], result[1]] = "X"
 
             for index, boat in enumerate(boats):
-                if all(pos in hit_positions for pos in boat.position) and index not in sink_boats:
+                if all(pos in hit_positions for pos in boat.position) and index not in sunk_boats:
                     print(f"\n {boats_names[index]} COULÉ ! \n")
-                    sink_boats.append(index)
+                    sunk_boats.append(index)
         else:
             print("\n PAS TOUCHE ! \n")
             missed_positions.append(result)
@@ -77,7 +80,7 @@ def main():
 
         grid_obj.print_grid()
 
-        if len(sink_boats) == len(boats):
+        if len(sunk_boats) == len(boats):
             print("Tous les navires sont coulés")
             break
 

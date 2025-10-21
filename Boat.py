@@ -1,6 +1,5 @@
-"""
-Classe permettant de définir les informations d'un bateau
-"""
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 class Boat:
     boats = []
